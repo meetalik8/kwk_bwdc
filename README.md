@@ -8,3 +8,4 @@ Education is considered to be the biggest equalizer. Does having equal qualifica
 - US Government Census Data
 - Developers who made Svelte & HighChart, especially the get started with Svelte Tutorial!
 - Chatgpt for helping me narrow down what County & State I should focus on since I am not from the US.
+- Images are from stock images.
