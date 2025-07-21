@@ -3,14 +3,22 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://meetalik8.github.io/kwk-bwdc",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "npm run build && gh-pages -d dist",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^6.0.0",
-    "svelte": "^5.35.5",
-    "vite": "^7.0.4"
+    "@highcharts/svelte": "^1.1.1",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "gh-pages": "^6.3.0",
+    "svelte": "^5.28.1",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@highcharts/map-collection": "^2.3.1",
+    "highcharts": "^12.3.0"
   }
 }
