@@ -51,7 +51,7 @@
   section {
     height: 100vh;
     position: relative;
-    background-image: url('/students.jpg');
+    background-image: url('/public/students.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

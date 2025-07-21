@@ -64,7 +64,7 @@
     </ArticleText>
 
     <ArticleText >
-      At the <strong>national level</strong>, <strong>Asians</strong> lead this category with <strong>33.77%</strong> representation —
+      At the <strong>national level</strong>, <strong>Asians</strong> lead this category with <strong>33.77%</strong> representation show
       a significant presence in high-skill sectors despite being a smaller population group.
     </ArticleText>
 

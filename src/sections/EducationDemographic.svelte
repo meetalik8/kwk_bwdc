@@ -94,7 +94,7 @@
 
       <ArticleText>
         These gaps can have long-term impacts on economic mobility, access to leadership roles,
-        and wealth accumulation in communities of color.
+        and wealth accumulation in certain communities.
       </ArticleText>
     {/snippet}
   </Scroller>

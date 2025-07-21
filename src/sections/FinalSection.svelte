@@ -76,17 +76,18 @@
       
       <div class="insight-card">
         <div class="insight-icon">🎓</div>
-        <p><strong>Higher education helps</strong> — but doesn't guarantee equal leadership access for all races.</p>
+        <p><strong>Higher education helps</strong> but doesn't guarantee equal leadership access for all races.</p>
       </div>
       
       <div class="insight-card">
         <div class="insight-icon">🔓</div>
-        <p>The pathway from education to opportunity remains <strong>unequal</strong> — and leadership structures reflect that.</p>
+        <p>The pathway from education to opportunity remains <strong>unequal</strong> and leadership structures reflect that.</p>
       </div>
     </div>
     
     <div class="tldr-footer">
       <p class="footer-text">Understanding these patterns is the first step toward more equitable leadership representation.</p>
+      <p class="footer-text"> Made using Data by <strong><a href="https://blackwealthdata.org/">BWDC</a></strong> & lessons by <strong><a href="https://www.kodewithklossy.com/"> Kode With Klossy!</a></strong></p>
     </div>
   </div>
 </section>
@@ -99,7 +100,7 @@
   .employment-scroll {
     height: 100vh;
     position: relative;
-    background-image: url('./public/mgmt.jpg'); 
+    background-image: url('/public/mgmt.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -240,6 +241,11 @@
     font-style: italic;
     font-weight: 400;
     margin: 0;
+  }
+
+  .footer-text a{
+    text-decoration: none;
+    color: green;
   }
 
   @media (max-width: 768px) {

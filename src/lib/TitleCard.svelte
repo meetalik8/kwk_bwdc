@@ -50,7 +50,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('./georgia.png');
+    background-image: url('/public/georgia.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
