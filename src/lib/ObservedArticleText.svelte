@@ -31,7 +31,7 @@
 <style>
     .article-text {
         margin: 50vh auto;
-        width: 50%;
+        width: 70%;
         background-color: #ff99fc;
         color: #0072BB;
         border: solid #8427c9 3px;

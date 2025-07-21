@@ -43,30 +43,6 @@
     legend: { enabled: true },
     credits: { enabled: false },
   };
-  let currentSlide = 0;
-
-  const updateChart = (index) => {
-    currentSlide = index;
-
-    if (chart) {
-      const updatedSeries = [
-        {
-          name: "Georgia",
-          data: data.map((d) => (index >= 1 ? d.georgia : 0)),
-          color: "#1E91D6",
-        },
-        {
-          name: "Fulton County",
-          data: data.map((d) => (index >= 2 ? d.fulton : 0)),
-          color: "#CC2936",
-        },
-      ];
-
-      chart.update({
-        series: updatedSeries,
-      });
-    }
-  };
 
   onMount(() => {
     chart = Highcharts.chart("bar-chart", chartOptions);
@@ -235,11 +211,6 @@
     max-width: 700px;
     color: white;
     text-align: center;
-  }
-
-  .overlay-text h1 {
-    font-size: 2rem;
-    line-height: 1.5;
   }
 
   .chart-container.hidden {
