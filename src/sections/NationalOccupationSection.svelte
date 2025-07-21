@@ -2,7 +2,7 @@
   import * as Highcharts from "highcharts";
   import { Chart } from "@highcharts/svelte";
   import Scroller from "../lib/Scroller.svelte";
-  import ObservedArticleText from "../lib/ObservedArticleText.svelte";
+  import ArticleText from "../lib/ArticleText.svelte";
 
 
   const nationalOccupationOptions = {
@@ -59,22 +59,22 @@
   {/snippet}
 
   {#snippet scrolly()}
-    <ObservedArticleText class="text-slide" {callback} {options}>
+    <ArticleText >
       Leadership roles in management, business, and professional fields shape the access to power and wealth.
-    </ObservedArticleText>
+    </ArticleText>
 
-    <ObservedArticleText class="text-slide" {callback} {options}>
+    <ArticleText >
       At the <strong>national level</strong>, <strong>Asians</strong> lead this category with <strong>33.77%</strong> representation —
       a significant presence in high-skill sectors despite being a smaller population group.
-    </ObservedArticleText>
+    </ArticleText>
 
-    <ObservedArticleText class="text-slide" {callback} {options}>
+    <ArticleText>
       <strong>White individuals</strong> hold <strong>25.63%</strong> of these roles showing broad access to leadership but not the highest share.
-    </ObservedArticleText>
+    </ArticleText>
 
-    <ObservedArticleText class="text-slide" {callback} {options}>
+    <ArticleText>
       <strong>Black workers</strong>, by contrast, represent just <strong>18.14%</strong> exposing a sharp underrepresentation in roles that typically lead to decision-making power and upward mobility.
-    </ObservedArticleText>
+    </ArticleText>
   {/snippet}
 </Scroller>
 
