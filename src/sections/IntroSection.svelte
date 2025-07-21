@@ -62,7 +62,7 @@
   }
 
   .overlay {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -74,13 +74,15 @@
     max-width: 800px;
     text-align: center;
     color: #fff;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
     font-size: 2rem;
     padding: 2rem;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    line-height: 1.4;
   }
 
   .text-container.visible {
@@ -88,31 +90,21 @@
     transform: translateY(0);
   }
 
-  /* Add some visual enhancements */
-  .text-container {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    line-height: 1.4;
-  }
-
-  /* Responsive design */
   @media (max-width: 768px) {
     .text-container {
       font-size: 1.5rem;
       padding: 1rem;
       max-width: 90%;
     }
+    
+    section {
+      background-attachment: scroll;
+    }
   }
 
   @media (max-width: 480px) {
     .text-container {
       font-size: 1.2rem;
-    }
-  }
-
-  /* Fix background attachment on mobile */
-  @media (max-width: 768px) {
-    section {
-      background-attachment: scroll;
     }
   }
 </style>

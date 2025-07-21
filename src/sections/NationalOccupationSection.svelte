@@ -2,55 +2,39 @@
   import * as Highcharts from "highcharts";
   import { Chart } from "@highcharts/svelte";
   import Scroller from "../lib/Scroller.svelte";
-  import ArticleText from "../lib/ArticleText.svelte";
+  import ObservedArticleText from "../lib/ObservedArticleText.svelte";
 
-  let options = {
+
+  const nationalOccupationOptions = {
     chart: {
-      type: "column",
+      type: "pie",
       backgroundColor: "transparent"
     },
     title: {
-      text: "Bachelor's Degree Attainment by Race (%)"
-    },
-    xAxis: {
-      categories: ['Black', 'Asian', 'White'],
-      title: {
-        text: 'Race'
-      }
-    },
-    yAxis: {
-      min: 0,
-      max: 100,
-      title: {
-        text: 'Percent with Bachelor&apos;s Degree'
-      }
-    },
-    legend: {
-      align: 'center',
-      verticalAlign: 'bottom'
+      text: "National Representation: Management & Professional Roles"
     },
     tooltip: {
-      shared: true,
-      valueSuffix: '%'
+      pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>"
     },
     plotOptions: {
-      column: {
+      pie: {
+        allowPointSelect: true,
+        cursor: "pointer",
         dataLabels: {
           enabled: true,
-          format: '{y}%'
+          format: "<b>{point.name}</b>: {point.percentage:.1f} %"
         }
       }
     },
     series: [
       {
-        name: 'Georgia',
-        data: [27.4, 59.0, 37.3],
-        color: '#4572A7'
-      },
-      {
-        name: 'Fulton County',
-        data: [37.5, 82.3, 75.4],
-        color: '#AA4643'
+        name: "Share",
+        colorByPoint: true,
+        data: [
+          { name: "Black", y: 18.14, color: "#1f78b4" },
+          { name: "Asian", y: 33.77, color: "#33a02c" },
+          { name: "White", y: 25.63, color: "#ff7f00" }
+        ]
       }
     ]
   };
@@ -59,46 +43,40 @@
 <section class="lead-in">
   <div class="overlay-text">
     <h1>
-      To understand opportunity, we must first understand who has access to higher education.
+      To understand power, we must examine who holds leadership positions and who’s left out.
     </h1>
   </div>
 </section>
 
-<div>
-  <Scroller layout="left">
-    {#snippet sticky()}
-      <h2><strong>Education Disparities Across Race</strong></h2>
-      <div class="chart-container">
-        <div class="chart">
-          <Chart {options} highcharts={Highcharts} />
-        </div>
+<Scroller layout="right">
+  {#snippet sticky()}
+    <h2><strong>Who Gets to Lead?</strong></h2>
+    <div class="chart-container">
+      <div class="chart">
+        <Chart options={nationalOccupationOptions} highcharts={Highcharts} />
       </div>
-    {/snippet}
+    </div>
+  {/snippet}
 
-    {#snippet scrolly()}
-      <ArticleText>
-        In Georgia, only <strong>27.4%</strong> of the Black population has a bachelor's degree,
-        compared to <strong>59.0%</strong> of Asians and <strong>37.3%</strong> of Whites.
-      </ArticleText>
+  {#snippet scrolly()}
+    <ObservedArticleText class="text-slide" {callback} {options}>
+      Leadership roles in management, business, and professional fields shape the access to power and wealth.
+    </ObservedArticleText>
 
-      <ArticleText>
-        Fulton County, while more educated overall, reflects similar trends:
-        <strong>82.3%</strong> of Asians and <strong>75.4%</strong> of Whites have degrees,
-        while only <strong>37.5%</strong> of Black residents do.
-      </ArticleText>
+    <ObservedArticleText class="text-slide" {callback} {options}>
+      At the <strong>national level</strong>, <strong>Asians</strong> lead this category with <strong>33.77%</strong> representation —
+      a significant presence in high-skill sectors despite being a smaller population group.
+    </ObservedArticleText>
 
-      <ArticleText>
-        The racial gap in educational attainment is stark. While geography improves overall
-        education levels, it does not erase systemic disparities.
-      </ArticleText>
+    <ObservedArticleText class="text-slide" {callback} {options}>
+      <strong>White individuals</strong> hold <strong>25.63%</strong> of these roles showing broad access to leadership but not the highest share.
+    </ObservedArticleText>
 
-      <ArticleText>
-        These gaps can have long-term impacts on economic mobility, access to leadership roles,
-        and wealth accumulation in communities of color.
-      </ArticleText>
-    {/snippet}
-  </Scroller>
-</div>
+    <ObservedArticleText class="text-slide" {callback} {options}>
+      <strong>Black workers</strong>, by contrast, represent just <strong>18.14%</strong> exposing a sharp underrepresentation in roles that typically lead to decision-making power and upward mobility.
+    </ObservedArticleText>
+  {/snippet}
+</Scroller>
 
 <style>
   .lead-in {
@@ -131,7 +109,6 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
   }
-
   .chart-container {
     width: 100%;
     display: flex;
@@ -181,15 +158,6 @@
 
   /* Responsive design */
   @media (max-width: 768px) {
-    .overlay-text {
-      padding: 2rem;
-      margin: 1rem;
-    }
-
-    .overlay-text h1 {
-      font-size: 2.2rem;
-    }
-
     .chart {
       width: 95%;
       padding: 2rem 1.5rem;
@@ -199,20 +167,9 @@
       font-size: 1.8rem;
       margin-bottom: 1.5rem;
     }
-
-    :global(.article-text) {
-      width: 85%;
-      padding: 2rem;
-      margin: 40vh auto;
-      font-size: 1rem;
-    }
   }
 
   @media (max-width: 480px) {
-    .overlay-text h1 {
-      font-size: 1.8rem;
-    }
-
     .chart {
       width: 98%;
       padding: 1.5rem 1rem;
@@ -220,12 +177,6 @@
 
     h2 {
       font-size: 1.5rem;
-    }
-
-    :global(.article-text) {
-      width: 90%;
-      padding: 1.5rem;
-      font-size: 0.95rem;
     }
   }
 </style>

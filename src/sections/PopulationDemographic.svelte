@@ -127,14 +127,14 @@
       <ObservedArticleText class="text-slide" {callback} {options}>
         <h2>Georgia: A Diverse State</h2>
         <p>
-          Georgia’s population is predominantly White, but also features a
+          Georgia's population is predominantly White, but also features a
           significant Black community. Asian residents make up a smaller yet
           growing share of the population.
         </p>
       </ObservedArticleText>
 
       <ObservedArticleText class="text-slide" {callback} {options}>
-        <h2>Now, Let’s Zoom In</h2>
+        <h2>Now, Let's Zoom In</h2>
         <p>
           Fulton County, home to Atlanta, reflects a different picture. The
           Black population here is larger than the state average, and the Asian
@@ -155,17 +155,6 @@
 </div>
 
 <style>
-
-  .chart-container {
-    width: 90%;
-    max-width: 900px;
-    height: auto;
-    padding: 2rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-  }
   .lead-in {
     height: 100vh;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -174,68 +163,134 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-  }
-  .overlay-text h1 {
-    font-size: 2.5rem;
-    line-height: 1.4;
-    margin-bottom: 2rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-
-  #bar-chart {
-    width: 100%;
-    height: 320px;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #222;
-  }
-
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 500px;
-    margin: 0 auto 2rem auto;
-    color: #333;
-    transition: opacity 0.6s ease-in-out;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   }
 
   .overlay-text {
     background: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 700px;
+    padding: 3rem;
+    border-radius: 16px;
+    max-width: 800px;
     color: white;
     text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .chart-container.hidden {
-    opacity: 0;
-    transform: translateY(40px);
-    transition:
-      opacity 1s ease,
-      transform 1s ease;
+  .overlay-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
   }
 
   .chart-container {
     width: 90%;
     max-width: 900px;
     height: auto;
-    padding: 2rem 1rem;
+    padding: 2.5rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .chart-container.hidden {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
   }
 
   #bar-chart {
     width: 100%;
-    height: 320px;
+    height: 380px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #1e293b;
+    font-weight: 700;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto 2rem auto;
+    color: #475569;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    transition: all 0.6s ease;
+  }
+
+  /* Text slide animations and states */
+  :global(.text-slide) {
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  :global(.text-slide.visible) {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .overlay-text {
+      padding: 2rem;
+      margin: 1rem;
+    }
+
+    .overlay-text h1 {
+      font-size: 2.2rem;
+    }
+
+    .chart-container {
+      padding: 1.5rem 1rem;
+      margin: 0 1rem;
+    }
+
+    #bar-chart {
+      height: 300px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .overlay-text h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .chart-container {
+      padding: 1rem;
+    }
+
+    #bar-chart {
+      height: 250px;
+    }
   }
 </style>

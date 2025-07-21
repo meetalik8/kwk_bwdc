@@ -3,7 +3,10 @@
   import IntroSection from "./sections/IntroSection.svelte"
   import PopulationDemographic from "./sections/PopulationDemographic.svelte";
   import EducationDemographic from "./sections/EducationDemographic.svelte";
-  import OccupationSection from "./sections/OccupationSection.svelte";
+  import NationalOccupationSection from "./sections/NationalOccupationSection.svelte";
+  import StateOccupationSection from "./sections/StateOccupationSection.svelte";
+  import CountyOccupationSection from "./sections/CountyOccupationSection.svelte";
+  import FinalSection from "./sections/FinalSection.svelte";
 </script>
 
 <main>
@@ -11,5 +14,8 @@
   <IntroSection />
   <PopulationDemographic />
   <EducationDemographic />
-  <OccupationSection />
+  <NationalOccupationSection />
+  <StateOccupationSection />
+  <CountyOccupationSection />
+  <FinalSection />
 </main>
