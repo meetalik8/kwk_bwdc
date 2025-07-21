@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://meetalik8.github.io/kwk-bwdc",
+  "homepage": "https://meetalik8.github.io/kwk_bwdc",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
