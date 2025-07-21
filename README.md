@@ -3,6 +3,7 @@ Education is considered to be the biggest equalizer. Does having equal qualifica
 
 #### Credit
 - Jasmine from KWK for creating the most incredible [template](https://github.com/jasminesamra/kwk-scrollytelling-template) and also for detailed lesson plans!
+- Black Wealth Data Center for the easy to read charts and making it easy for everyone.
 - Youtube and StackOverflow for the debugging help!
 - US Government Census Data
 - Developers who made Svelte & HighChart, especially the get started with Svelte Tutorial!
