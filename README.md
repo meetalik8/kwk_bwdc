@@ -1,22 +1,9 @@
-# KWK Scrollytelling template
+# Are Equal Degrees = Equal Access? 
+Education is considered to be the biggest equalizer. Does having equal qualifications = equal access & opportunities? I wanted an answer for this question so I decided to research on it and using the data from the [Black Wealth Data Center](https://blackwealthdata.org/) I found my answer! To know the answer check this out! [Answer](https://meetalik8.github.io/kwk_bwdc/).
 
-This template is a starting point / example of how to create a scrollytelling piece using Svelte and Highcharts! 
-
-## Demo
-See a live demo of the page [here](https://jasminesamra.github.io/kwk-scrollytelling-template/)!
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
-
-## How to clone the repo
-On this repo's homepage in GitHub, click the `Use this template` button. Select the option to create a new repository. This will create a new repo under your GitHub account.
-
-Navigate to your new copy of this template in your GitHub profile. 
-
-Clone your new repo locally and `cd` into it. 
-
-Run `npm install` and then `npm run dev` to spin up the project locally. Then, start making changes! You can use this repo as a starting point for your own final project or simply as an example. 
-
-## Credit
-Repo created using vite (`npm create vite@6`)
+#### Credit
+- Jasmine from KWK for creating the most incredible [template](https://github.com/jasminesamra/kwk-scrollytelling-template) and also for detailed lesson plans!
+- Youtube and StackOverflow for the debugging help!
+- US Government Census Data
+- Developers who made Svelte & HighChart, especially the get started with Svelte Tutorial!
+- Chatgpt for helping me narrow down what County & State I should focus on since I am not from the US.
